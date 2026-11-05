@@ -6,36 +6,74 @@
 		<link href="styles/style.css" rel="stylesheet" />
 		<title>Recept på pannkakor</title>
 	</head>
+
 	<body>
-		<main>
-			<img
-				class="recipe-image"
-				src="/images/pancakesWstrawberries.jpg"
-				alt="Pannkakor med jordgubbar"
-			/>
+		<!-- Skip Link-->
+		<a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
+		<!-- Header -->
+		<header>
+			<p>meny</p>
+		</header>
 
-			<div class="recipe">
-				<h1>Enkelt recept på pannkakor</h1>
-				<p class="recipe-description">
-					Gör traditionella tunna pannkakor med detta enkla och goda recept
-				</p>
+		<!-- Main Content -->
+		<main id="main-content">
+			<!-- Recipe Content -->
+			<section class="recipe">
+				<!-- Recipe Image -->
+				<img
+					class="recipe-image"
+					src="/images/pancakesWstrawberries.jpg"
+					alt="Pannkakor fint upplagda på en tallrik med grädde och uppskurna jordgubbar"
+				/>
+				<!-- Recipe Info -->
+				<section class="recipe-info">
+					<h1>Enkelt recept på pannkakor</h1>
+					<p class="recipe-description">
+						Gör traditionella tunna pannkakor med detta enkla och goda recept
+					</p>
+					<div class="recipe-info-sum">
+						<p>4 Port</p>
+						<p>30 min</p>
+						<p>Lätt</p>
+					</div>
+				</section>
 
+				<!-- Ingredients  -->
 				<section class="recipe-content recipe-ingredients">
 					<h2>Ingredienser</h2>
 					<p>För 4 portioner</p>
-					<ul class="list">
-						<li>2 1/2 dl vetemjöl</li>
-						<li>1/2 tsk salt</li>
-						<li>6 dl mjölk</li>
-						<li>3 ägg</li>
-						<li>smör (till stekning)</li>
-						<li>sylt, bär eller frukt till servering</li>
+					<ul class="recipe-list recipe-ingredients-list">
+						<li>
+							<input id="flour" type="checkbox" />
+							<label for="flour"> 2 1/2 dl vetemjöl</label>
+						</li>
+						<li>
+							<input id="salt" type="checkbox" />
+							<label for="salt"> 1/2 tsk salt</label>
+						</li>
+						<li>
+							<input id="milk" type="checkbox" />
+							<label for="milk"> 6 dl mjölk</label>
+						</li>
+						<li>
+							<input id="egg" type="checkbox" />
+							<label for="egg"> 3 ägg</label>
+						</li>
+						<li>
+							<input id="butter" type="checkbox" />
+							<label for="butter"> smör (till stekning)</label>
+						</li>
+						<li>
+							<input id="jam" type="checkbox" />
+							<label for="jam"> sylt, bär eller frukt till servering</label>
+						</li>
 					</ul>
 				</section>
 
+				<!-- Instructions -->
 				<section class="recipe-content recipe-instructions">
 					<h2>Instruktioner</h2>
-					<ol class="list">
+					<ol class="recipe-list">
 						<li>Blanda mjöl och salt i en bunke</li>
 						<li>Blanda i hälften av mjölken och vispa till en slät smet</li>
 						<li>Vispa i resten av mjölken och äggen.</li>
@@ -47,23 +85,29 @@
 						<li>Servera med sylt, bär eller frukt</li>
 					</ol>
 				</section>
+			</section>
+			<!-- End of recipe -->
 
-				<section>
-					<h2>Serveringsförslag</h2>
-					<div class="ServingSuggestionImages">
-						<img
-							class="ServingSuggestionImage"
-							src="/images/pancakesServingSuggestion1.jpg"
-							alt=""
-						/>
-						<img
-							class="ServingSuggestionImage"
-							src="/images/pancakesServingSuggestion2.jpg"
-							alt=""
-						/>
-					</div>
-				</section>
-			</div>
+			<!-- Serving Suggestions -->
+			<section class="recipe-serving-suggestion-container">
+				<h2>Serveringsförslag</h2>
+				<div class="recipe-serving-suggestion">
+					<img
+						class="recipe-suggestion-image"
+						src="/images/pancakesServingSuggestion1.jpg"
+						alt="Pannkakor på hög på en tallrik med färska hallon och hallonsylt."
+					/>
+					<img
+						class="recipe-suggestion-image"
+						src="/images/pancakesServingSuggestion2.jpg"
+						alt="Pannkakor på en tallrik med färska hallon och blåbär samt grädde."
+					/>
+				</div>
+			</section>
 		</main>
+
+		<footer>
+			<p>&copy; 2026 Pannkakor</p>
+		</footer>
 	</body>
 </html>
