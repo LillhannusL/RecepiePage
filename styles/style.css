@@ -23,7 +23,7 @@
 	/* spacings */
 	--spacing-small: 0.5rem;
 	--spacing-normal: 1rem;
-	/* sizes */
+	
 	/* border */
 	--border-normal: 1px solid var(--clr-accent);
 }
@@ -39,7 +39,7 @@
 	margin: 0;
 	padding: 0;
 
-	font-family: var(--ff-main);
+	font: inherit;
 }
 
 img,
@@ -70,10 +70,11 @@ h6 {
 }
 
 /* === GLOBAL === */
+
 body {
 	background-color: var(--clr-bg-main);
 	margin-bottom: var(--spacing-small);
-
+	font-family: var(--ff-main);
 	line-height: var(--lh-normal);
 }
 
@@ -113,6 +114,7 @@ a {
 }
 
 /* === NAV === */
+
 nav {
 	margin: var(--spacing-normal);
 
