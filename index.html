@@ -4,19 +4,96 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="/styles/style.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Petit+Formal+Script&display=swap"
+			rel="stylesheet"
+		/>
 		<title>Startsida</title>
 	</head>
 	<body>
 		<a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
-		<nav>
-			<ul role="list">
-				<li><a href="index.html">Hem</a></li>
-				<li><a href="recipe.html">Recept</a></li>
-				<li><a href="share-recipe.html">Dela Recept</a></li>
-			</ul>
-		</nav>
+
+		<header>
+			<a href="index.html" class="logo">Recept</a>
+			<nav aria-label="Main Navigation">
+				<ul role="list">
+					<li><a href="index.html">Hem</a></li>
+					<li><a href="recipe.html">Recept</a></li>
+					<li><a href="share-recipe.html">Dela Recept</a></li>
+				</ul>
+			</nav>
+		</header>
+
 		<main id="main-content">
-			<h1>Innehåller kommer snart</h1>
+			<!-- Bild, Rubrik & intro ovanpå bilden -->
+			<section class="hero">
+				<div class="hero-container">
+					<img src="/images/heroPic.jpg" alt="" class="hero-image" />
+					<div class="fade-overlay"></div>
+				</div>
+
+				<div class="hero-text">
+					<h1>Rubrik</h1>
+					<p>Intro ovanpå bilden</p>
+				</div>
+			</section>
+
+			<!-- Taggar, Frukost, Middag, Efterrätt, Fika -->
+			<div class="tags">
+				<h2>Fler Recept</h2>
+				<ul role="list" class="tags-list">
+					<li><a href="#">Frukost</a></li>
+					<li><a href="#">Middag</a></li>
+					<li><a href="#">Efterrätt</a></li>
+					<li><a href="#">Fika</a></li>
+				</ul>
+			</div>
+
+			<!-- Länk bilder till recept, Text ovanpå = titel, tid  -->
+			<section class="suggestion-container">
+				<article class="card">
+					<a href="/recipe.html">Pannkakor</a>
+					<p>30 min</p>
+				</article>
+				<article class="card">
+					<a href="/recipe.html">Pannkakor</a>
+					<p>30 min</p>
+				</article>
+				<article class="card">
+					<a href="/recipe.html">Pannkakor</a>
+					<p>30 min</p>
+				</article>
+			</section>
+
+			<hr />
+
+			<!-- logo + text  -->
+			<section class="bottom-content">
+				<div>
+					<a href="/index.html" class="logo">Recept</a>
+					<h3>Enkla recept som alla kan laga</h3>
+				</div>
+
+				<!-- second nav = Om sajten, frukost, middag, efterrätt, fika -->
+				<nav>
+					<ul role="list">
+						<li><a href="#">Om Sajten</a></li>
+						<li><p>Fler Recept</p></li>
+						<li><a href="#">Frukost</a></li>
+						<li><a href="#">Middag</a></li>
+						<li><a href="#">Efterrätt</a></li>
+						<li><a href="#">Fika</a></li>
+					</ul>
+				</nav>
+			</section>
+
+			<!-- Footer -->
+			<footer>
+				<p>Bilder från HEMSIDA</p>
+				<p>&copy; 2026 Lisa Lillhannus</p>
+			</footer>
 		</main>
 	</body>
 </html>
