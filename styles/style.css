@@ -81,9 +81,12 @@ h6 {
 
 body {
 	background-color: var(--clr-bg-main);
+  
 	font-family: var(--ff-main);
 	color: var(--clr-font);
 
+	margin-bottom: var(--spacing-small);
+  
 	line-height: var(--lh-normal);
 }
 
@@ -138,6 +141,8 @@ header {
 	nav {
 		margin-inline-start: auto;
 	}
+nav {
+	margin: var(--spacing-normal);
 
 	ul {
 		display: flex;
