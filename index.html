@@ -15,7 +15,7 @@
 	<body>
 		<a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
 
-		<header>
+		<header class="main-header">
 			<a href="index.html" class="logo">Recept</a>
 			<nav aria-label="Main Navigation">
 				<ul role="list">
@@ -29,12 +29,12 @@
 		<main id="main-content">
 			<!-- Bild, Rubrik & intro ovanpå bilden -->
 			<section class="hero">
-        <img src="/images/heroPic.jpg" />
-        <div class="hero-text">
-          <h1>Rubrik</h1>
-          <p>Intro ovanpå bilden</p>
-        </div>
-      </section>
+				<img src="/images/heroPic.jpg" />
+				<div class="fade-overlay"></div>
+				<!-- <div> -->
+				<h1>Rubrik</h1>
+				<p>Intro ovanpå bilden</p>
+				<!-- </div> -->
 			</section>
 
 			<!-- Taggar, Frukost, Middag, Efterrätt, Fika -->
@@ -49,35 +49,79 @@
 			</div>
 
 			<!-- Länk bilder till recept, Text ovanpå = titel, tid  -->
-			<section class="suggestion-container">
-				<article class="card">
-					<a href="/recipe.html">Pannkakor</a>
-					<p>30 min</p>
-				</article>
-				<article class="card">
-					<a href="/recipe.html">Pannkakor</a>
-					<p>30 min</p>
-				</article>
-				<article class="card">
-					<a href="/recipe.html">Pannkakor</a>
-					<p>30 min</p>
-				</article>
-			</section>
+			<ul role="list" class="recipie-grid">
+				<li class="card">
+					<a href="/recipe.html">
+						<img
+							src="/images/pancakesWstrawberries.jpg"
+							alt="Beskriving på vad bilden föreställer"
+							class="card-img"
+						/>
+						<h3>Pannkakor</h3>
+					</a>
+				</li>
+				<li class="card">
+					<a href="/recipe.html">
+						<img
+							src="/images/pancakesWstrawberries.jpg"
+							alt="Beskriving på vad bilden föreställer"
+							class="card-img"
+						/>
+						<h3>Pannkakor</h3>
+					</a>
+				</li>
+				<li class="card">
+					<a href="/recipe.html">
+						<img
+							src="/images/pancakesWstrawberries.jpg"
+							alt="Beskriving på vad bilden föreställer"
+							class="card-img"
+						/>
+						<h3>Pannkakor</h3>
+					</a>
+				</li>
+				<li class="card">
+					<a href="/recipe.html">
+						<img
+							src="/images/pancakesWstrawberries.jpg"
+							alt="Beskriving på vad bilden föreställer"
+							class="card-img"
+						/>
+						<h3>Pannkakor</h3>
+					</a>
+				</li>
+				<li class="card">
+					<a href="/recipe.html">
+						<img
+							src="/images/pancakesWstrawberries.jpg"
+							alt="Beskriving på vad bilden föreställer"
+							class="card-img"
+						/>
+						<h3>Pannkakor</h3>
+					</a>
+				</li>
+				<li class="card">
+					<a href="/recipe.html">
+						<img
+							src="/images/pancakesWstrawberries.jpg"
+							alt="Beskriving på vad bilden föreställer"
+							class="card-img"
+						/>
+						<h3>Pannkakor</h3>
+					</a>
+				</li>
+			</ul>
 
-			<hr />
+			<div class="divider"></div>
 
 			<!-- logo + text  -->
 			<section class="bottom-content">
-				<div>
-					<a href="/index.html" class="logo">Recept</a>
-					<h3>Enkla recept som alla kan laga</h3>
-				</div>
-
+				<h3>Enkla recept som alla kan laga</h3>
+				<a data-type="about" href="#">Om Sajten</a>
 				<!-- second nav = Om sajten, frukost, middag, efterrätt, fika -->
-				<nav>
-					<ul role="list">
-						<li><a href="#">Om Sajten</a></li>
-						<li><p>Fler Recept</p></li>
+				<nav class="second-nav">
+					<h3>Fler Recept</h3>
+					<ul role="list" class="tags-list">
 						<li><a href="#">Frukost</a></li>
 						<li><a href="#">Middag</a></li>
 						<li><a href="#">Efterrätt</a></li>
@@ -88,8 +132,8 @@
 
 			<!-- Footer -->
 			<footer>
-				<p>Bilder från HEMSIDA</p>
 				<p>&copy; 2026 Lisa Lillhannus</p>
+				<p>HELLO</p>
 			</footer>
 		</main>
 	</body>
