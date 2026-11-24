@@ -10,24 +10,349 @@
 			href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Petit+Formal+Script&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Share Recipe</title>
+		<title>Dela ditt recept</title>
 	</head>
 	<body>
 		<a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
 
-		<header>
-			<a href="index.html" class="logo">Recept</a>
+		<header class="main-header">
+			<a href="index.html" class="logo">LOGO</a>
 			<nav aria-label="Main Navigation">
 				<ul role="list">
-					<li><a href="index.html">Hem</a></li>
 					<li><a href="recipe.html">Recept</a></li>
+					<li><a href="#">Om Sajten</a></li>
 					<li><a href="share-recipe.html">Dela Recept</a></li>
 				</ul>
 			</nav>
 		</header>
 
-		<main id="main-content">
-			<h1>Innehåll kommer</h1>
+		<main class="share-recipe" id="main-content">
+			<h1>Dela ditt recept!</h1>
+
+			<form>
+				<fieldset>
+					<legend>Om receptet</legend>
+
+					<!-- Recepie Name -->
+					<div class="form-group">
+						<label for="name">Receptets namn *</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Mammas lasagne"
+							required
+						/>
+					</div>
+
+					<!-- Category -->
+					<div class="form-group">
+						<label for="category">Kategori</label>
+						<select id="category" name="category">
+							<option value="">-- Välj kategori --</option>
+							<option value="breakfast">Frukost</option>
+							<option value="dinner">Middag</option>
+							<option value="dessert">Efterrätt</option>
+							<option value="fika">Fika</option>
+						</select>
+					</div>
+
+					<!-- Time and Portions -->
+					<div class="time-portions">
+						<div class="form-group">
+							<label for="time">Tid i minuter</label>
+							<input type="number" id="time" name="time" min="1" />
+						</div>
+
+						<div class="form-group">
+							<label for="portions">Antal portioner</label>
+							<input type="number" id="portions" name="portions" min="1" />
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- Level -->
+				<fieldset>
+					<legend>Svårighetsgrad</legend>
+
+					<div class="form-group">
+						<input type="radio" id="easy" name="level" value="easy" />
+						<label for="easy">Lätt</label>
+					</div>
+
+					<div class="form-group">
+						<input
+							type="radio"
+							id="intermediate"
+							name="level"
+							value="intermediate"
+						/>
+						<label for="intermediate">Medel</label>
+					</div>
+
+					<div class="form-group">
+						<input type="radio" id="hard" name="level" value="hard" />
+						<label for="hard">Svår</label>
+					</div>
+				</fieldset>
+
+				<!-- Ingredients and Instructions -->
+				<fieldset>
+					<legend>Receptet</legend>
+
+					<fieldset class="ingredients-container">
+						<legend>
+							Ingredienser
+							<p>* minst 3 ingredienser</p>
+						</legend>
+						<div class="ingredients-header" aria-hidden="true">
+							<span>Mängd</span>
+							<span>Enhet</span>
+							<span>Ingredienser</span>
+						</div>
+
+						<div class="ingredient-row">
+							<input
+								type="number"
+								step="any"
+								min="0"
+								name="amount[]"
+								placeholder="2"
+								aria-label="Mängd"
+								required
+							/>
+							<input
+								type="text"
+								name="unit[]"
+								list="units"
+								placeholder="dl"
+								aria-label="Enhet"
+								required
+							/>
+							<input
+								type="text"
+								name="ingredients[]"
+								placeholder="Vetemjöl"
+								aria-label="Ingredienser"
+								required
+							/>
+						</div>
+						<div class="ingredient-row">
+							<input
+								type="number"
+								step="any"
+								min="0"
+								name="amount[]"
+								placeholder="3"
+								aria-label="Mängd"
+								required
+							/>
+							<input
+								type="text"
+								name="unit[]"
+								list="units"
+								placeholder="tsk"
+								aria-label="Enhet"
+								required
+							/>
+							<input
+								type="text"
+								name="ingredients[]"
+								placeholder="Bakpulver"
+								aria-label="Ingredienser"
+								required
+							/>
+						</div>
+						<div class="ingredient-row">
+							<input
+								type="number"
+								step="any"
+								min="0"
+								name="amount[]"
+								placeholder="100"
+								aria-label="Mängd"
+								required
+							/>
+							<input
+								type="text"
+								name="unit[]"
+								list="units"
+								placeholder="g"
+								aria-label="Enhet"
+								required
+							/>
+							<input
+								type="text"
+								name="ingredients[]"
+								placeholder="Smör"
+								aria-label="Ingredienser"
+								required
+							/>
+						</div>
+						<div class="ingredient-row">
+							<input
+								type="number"
+								step="any"
+								min="0"
+								name="amount[]"
+								placeholder="2"
+								aria-label="Mängd"
+							/>
+							<input
+								type="text"
+								name="unit[]"
+								list="units"
+								placeholder="st"
+								aria-label="Enhet"
+							/>
+							<input
+								type="text"
+								name="ingredients[]"
+								placeholder="Ägg"
+								aria-label="Ingredienser"
+							/>
+						</div>
+						<div class="ingredient-row">
+							<input
+								type="number"
+								step="any"
+								min="0"
+								name="amount[]"
+								placeholder="3"
+								aria-label="Mängd"
+							/>
+							<input
+								type="text"
+								name="unit[]"
+								list="units"
+								placeholder="dl"
+								aria-label="Enhet"
+							/>
+							<input
+								type="text"
+								name="ingredients[]"
+								placeholder="Mjöl"
+								aria-label="Ingredienser"
+							/>
+						</div>
+						<div class="ingredient-row">
+							<input
+								type="number"
+								step="any"
+								min="0"
+								name="amount[]"
+								placeholder="100"
+								aria-label="Mängd"
+							/>
+							<input
+								type="text"
+								name="unit[]"
+								list="units"
+								placeholder="g"
+								aria-label="Enhet"
+							/>
+							<input
+								type="text"
+								name="ingredients[]"
+								placeholder="Bär"
+								aria-label="Ingredienser"
+							/>
+						</div>
+						<div class="ingredient-row">
+							<input
+								type="number"
+								step="any"
+								min="0"
+								name="amount[]"
+								placeholder="1 / 2"
+								aria-label="Mängd"
+							/>
+							<input
+								type="text"
+								name="unit[]"
+								list="units"
+								placeholder="pkt"
+								aria-label="Enhet"
+							/>
+							<input
+								type="text"
+								name="ingredients[]"
+								placeholder="Jäst"
+								aria-label="Ingredienser"
+							/>
+						</div>
+						<div class="ingredient-row">
+							<input
+								type="number"
+								step="any"
+								min="0"
+								name="amount[]"
+								placeholder="3"
+								aria-label="Mängd"
+							/>
+							<input
+								type="text"
+								name="unit[]"
+								list="units"
+								placeholder="tsk"
+								aria-label="Enhet"
+							/>
+							<input
+								type="text"
+								name="ingredients[]"
+								placeholder="Vanlijsocker"
+								aria-label="Ingredienser"
+							/>
+						</div>
+					</fieldset>
+
+					<div class="form-group">
+						<label for="instructions">Gör så här *</label>
+						<textarea
+							id="instructions"
+							name="instructions"
+							rows="5"
+							required
+						></textarea>
+					</div>
+				</fieldset>
+
+				<datalist id="units">
+					<option value="krm"></option>
+					<option value="tsk"></option>
+					<option value="msk"></option>
+					<option value="dl"></option>
+					<option value="ml"></option>
+					<option value="l"></option>
+					<option value="g"></option>
+					<option value="hg"></option>
+					<option value="kg"></option>
+					<option value="st"></option>
+				</datalist>
+
+				<!-- User Info -->
+				<fieldset>
+					<legend>Om dig</legend>
+
+					<div class="form-group">
+						<label for="user-name">Ditt namn</label>
+						<input type="text" id="user-name" name="user-name" />
+					</div>
+
+					<div class="form-group">
+						<label for="email">E-post *</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="namn@email.com"
+							reqired
+						/>
+					</div>
+				</fieldset>
+
+				<button type="submit">Skicka recept</button>
+			</form>
 		</main>
 	</body>
 </html>
