@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +22,7 @@
 			<a href="index.html" class="logo">LOGO</a>
 			<nav aria-label="Main Navigation">
 				<ul role="list">
-					<li><a href="recipe.html">Recept</a></li>
+					<li><a href="recipe.html" aria-current="page">Recept</a></li>
 					<li><a href="#">Om Sajten</a></li>
 					<li><a href="share-recipe.html">Dela Recept</a></li>
 				</ul>
@@ -39,11 +39,17 @@
 			<article class="recipe-info">
 				<h1>Enkelt recept på pannkakor</h1>
 				<p>Gör traditionella tunna pannkakor med detta enkla och goda recept</p>
-				<div class="recipe-meta">
-					<p>4 Port</p>
-					<p>30 min</p>
-					<p>Lätt</p>
-				</div>
+				<ul role="list" class="recipe-meta">
+					<li>
+						<p>4 Port</p>
+					</li>
+					<li>
+						<p>30 min</p>
+					</li>
+					<li>
+						<p>Lätt</p>
+					</li>
+				</ul>
 			</article>
 
 			<!-- Ingredients  -->
@@ -97,20 +103,31 @@
 			<section class="recipe-bottom">
 				<h2>Serveringsförslag</h2>
 				<div class="serving-suggestion">
-					<img
-						src="/images/pancakesServingSuggestion1.jpg"
-						alt="Pannkakor på hög på en tallrik med färska hallon och hallonsylt."
-					/>
-					<img
-						src="/images/pancakesServingSuggestion2.jpg"
-						alt="Pannkakor på en tallrik med färska hallon och blåbär samt grädde."
-					/>
+					<figure>
+						<img
+							src="/images/pancakesServingSuggestion1.jpg"
+							alt="Pannkakor på hög på en tallrik med färska hallon och hallonsylt."
+						/>
+						<figcaption class="m-top">
+							Pannkakor serverat med färska hallon och hallonsylt
+						</figcaption>
+					</figure>
+					<figure>
+						<img
+							src="/images/pancakesServingSuggestion2.jpg"
+							alt="Pannkakor på en tallrik med färska hallon och blåbär samt grädde."
+						/>
+						<figcaption class="m-top">
+							Pannkakor serverat med färska hallon och blåbär samt vispad grädde
+						</figcaption>
+					</figure>
 				</div>
 			</section>
 		</main>
 
 		<footer>
-			<p>&copy; 2026 Pannkakor</p>
+			<p class="m-bottom m-top m-left">&copy; 2026 Lisa Lillhannus</p>
+			<p class="m-right m-top"><a href="index.html">LOGO</a></p>
 		</footer>
 	</body>
 </html>

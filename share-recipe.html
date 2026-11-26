@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,7 +21,9 @@
 				<ul role="list">
 					<li><a href="recipe.html">Recept</a></li>
 					<li><a href="#">Om Sajten</a></li>
-					<li><a href="share-recipe.html">Dela Recept</a></li>
+					<li>
+						<a href="share-recipe.html" aria-current="page">Dela Recept</a>
+					</li>
 				</ul>
 			</nav>
 		</header>
@@ -72,28 +74,35 @@
 				</fieldset>
 
 				<!-- Level -->
-				<fieldset>
+				<fieldset class="level">
 					<legend>Svårighetsgrad</legend>
 
-					<div class="form-group">
-						<input type="radio" id="easy" name="level" value="easy" />
-						<label for="easy">Lätt</label>
-					</div>
+					<label for="easy"
+						><input
+							type="radio"
+							id="easy"
+							name="level"
+							value="easy"
+						/>Lätt</label
+					>
 
-					<div class="form-group">
-						<input
+					<label for="intermediate"
+						><input
 							type="radio"
 							id="intermediate"
 							name="level"
 							value="intermediate"
-						/>
-						<label for="intermediate">Medel</label>
-					</div>
+						/>Medel</label
+					>
 
-					<div class="form-group">
-						<input type="radio" id="hard" name="level" value="hard" />
-						<label for="hard">Svår</label>
-					</div>
+					<label for="hard"
+						><input
+							type="radio"
+							id="hard"
+							name="level"
+							value="hard"
+						/>Svår</label
+					>
 				</fieldset>
 
 				<!-- Ingredients and Instructions -->
@@ -103,7 +112,7 @@
 					<fieldset class="ingredients-container">
 						<legend>
 							Ingredienser
-							<p>* minst 3 ingredienser</p>
+							<span class="block">* minst 3 ingredienser</span>
 						</legend>
 						<div class="ingredients-header" aria-hidden="true">
 							<span>Mängd</span>
@@ -111,16 +120,21 @@
 							<span>Ingredienser</span>
 						</div>
 
-						<div class="ingredient-row">
-							<input
-								type="number"
-								step="any"
-								min="0"
-								name="amount[]"
-								placeholder="2"
-								aria-label="Mängd"
-								required
-							/>
+												<div class="ingredient-row">
+							<label>
+								<span class="visually-hidden">Mängd, ingrediens 1</span>
+								<input
+									type="number"
+									step="any"
+									min="0"
+									name="amount[]"
+									placeholder="2"
+									aria-label="Mängd"
+									required
+								/>
+							</label>
+							<label>
+								<span class="visually-hidden">Enhet, ingrediens 1</span>
 							<input
 								type="text"
 								name="unit[]"
@@ -129,6 +143,9 @@
 								aria-label="Enhet"
 								required
 							/>
+							</label>
+							<label>
+								<span class="visually-hidden">Ingrediens 1</span>
 							<input
 								type="text"
 								name="ingredients[]"
@@ -138,172 +155,177 @@
 							/>
 						</div>
 						<div class="ingredient-row">
-							<input
-								type="number"
-								step="any"
-								min="0"
-								name="amount[]"
-								placeholder="3"
-								aria-label="Mängd"
-								required
-							/>
-							<input
-								type="text"
-								name="unit[]"
-								list="units"
-								placeholder="tsk"
-								aria-label="Enhet"
-								required
-							/>
-							<input
-								type="text"
-								name="ingredients[]"
-								placeholder="Bakpulver"
-								aria-label="Ingredienser"
-								required
-							/>
-						</div>
-						<div class="ingredient-row">
-							<input
-								type="number"
-								step="any"
-								min="0"
-								name="amount[]"
-								placeholder="100"
-								aria-label="Mängd"
-								required
-							/>
-							<input
-								type="text"
-								name="unit[]"
-								list="units"
-								placeholder="g"
-								aria-label="Enhet"
-								required
-							/>
-							<input
-								type="text"
-								name="ingredients[]"
-								placeholder="Smör"
-								aria-label="Ingredienser"
-								required
-							/>
-						</div>
-						<div class="ingredient-row">
-							<input
-								type="number"
-								step="any"
-								min="0"
-								name="amount[]"
-								placeholder="2"
-								aria-label="Mängd"
-							/>
-							<input
-								type="text"
-								name="unit[]"
-								list="units"
-								placeholder="st"
-								aria-label="Enhet"
-							/>
-							<input
-								type="text"
-								name="ingredients[]"
-								placeholder="Ägg"
-								aria-label="Ingredienser"
-							/>
-						</div>
-						<div class="ingredient-row">
-							<input
-								type="number"
-								step="any"
-								min="0"
-								name="amount[]"
-								placeholder="3"
-								aria-label="Mängd"
-							/>
+							<label>
+								<span class="visually-hidden">Mängd, ingrediens 2</span>
+								<input
+									type="number"
+									step="any"
+									min="0"
+									name="amount[]"
+									placeholder="2"
+									aria-label="Mängd"
+									required
+								/>
+							</label>
+							<label>
+								<span class="visually-hidden">Enhet, ingrediens 2</span>
 							<input
 								type="text"
 								name="unit[]"
 								list="units"
 								placeholder="dl"
 								aria-label="Enhet"
+								required
 							/>
+							</label>
+							<label>
+								<span class="visually-hidden">Ingrediens 2</span>
 							<input
 								type="text"
 								name="ingredients[]"
-								placeholder="Mjöl"
+								placeholder="Vetemjöl"
 								aria-label="Ingredienser"
+								required
 							/>
 						</div>
 						<div class="ingredient-row">
-							<input
-								type="number"
-								step="any"
-								min="0"
-								name="amount[]"
-								placeholder="100"
-								aria-label="Mängd"
-							/>
+							<label>
+								<span class="visually-hidden">Mängd, ingrediens 3</span>
+								<input
+									type="number"
+									step="any"
+									min="0"
+									name="amount[]"
+									placeholder="2"
+									aria-label="Mängd"
+									required
+								/>
+							</label>
+							<label>
+								<span class="visually-hidden">Enhet, ingrediens 3</span>
 							<input
 								type="text"
 								name="unit[]"
 								list="units"
-								placeholder="g"
+								placeholder="dl"
 								aria-label="Enhet"
+								required
 							/>
+							</label>
+							<label>
+								<span class="visually-hidden">Ingrediens 3</span>
 							<input
 								type="text"
 								name="ingredients[]"
-								placeholder="Bär"
+								placeholder="Vetemjöl"
 								aria-label="Ingredienser"
+								required
 							/>
 						</div>
 						<div class="ingredient-row">
-							<input
-								type="number"
-								step="any"
-								min="0"
-								name="amount[]"
-								placeholder="1 / 2"
-								aria-label="Mängd"
-							/>
+							<label>
+								<span class="visually-hidden">Mängd, ingrediens 4</span>
+								<input
+									type="number"
+									step="any"
+									min="0"
+									name="amount[]"
+									placeholder="2"
+									aria-label="Mängd"
+									required
+								/>
+							</label>
+							<label>
+								<span class="visually-hidden">Enhet, ingrediens 4</span>
 							<input
 								type="text"
 								name="unit[]"
 								list="units"
-								placeholder="pkt"
+								placeholder="dl"
 								aria-label="Enhet"
+								required
 							/>
+							</label>
+							<label>
+								<span class="visually-hidden">Ingrediens 4</span>
 							<input
 								type="text"
 								name="ingredients[]"
-								placeholder="Jäst"
+								placeholder="Vetemjöl"
 								aria-label="Ingredienser"
+								required
 							/>
 						</div>
 						<div class="ingredient-row">
-							<input
-								type="number"
-								step="any"
-								min="0"
-								name="amount[]"
-								placeholder="3"
-								aria-label="Mängd"
-							/>
+							<label>
+								<span class="visually-hidden">Mängd, ingrediens 5</span>
+								<input
+									type="number"
+									step="any"
+									min="0"
+									name="amount[]"
+									placeholder="2"
+									aria-label="Mängd"
+									required
+								/>
+							</label>
+							<label>
+								<span class="visually-hidden">Enhet, ingrediens 5</span>
 							<input
 								type="text"
 								name="unit[]"
 								list="units"
-								placeholder="tsk"
+								placeholder="dl"
 								aria-label="Enhet"
+								required
 							/>
+							</label>
+							<label>
+								<span class="visually-hidden">Ingrediens 5</span>
 							<input
 								type="text"
 								name="ingredients[]"
-								placeholder="Vanlijsocker"
+								placeholder="Vetemjöl"
 								aria-label="Ingredienser"
+								required
 							/>
 						</div>
+						<div class="ingredient-row">
+							<label>
+								<span class="visually-hidden">Mängd, ingrediens 6</span>
+								<input
+									type="number"
+									step="any"
+									min="0"
+									name="amount[]"
+									placeholder="2"
+									aria-label="Mängd"
+	
+								/>	
+							</label>
+							<label>
+								<span class="visually-hidden">Enhet, ingrediens 6</span>
+							<input
+								type="text"
+								name="unit[]"
+								list="units"
+								placeholder="dl"
+								aria-label="Enhet"
+		
+							/>
+							</label>
+							<label>
+								<span class="visually-hidden">Ingrediens 6</span>
+							<input
+								type="text"
+								name="ingredients[]"
+								placeholder="Vetemjöl"
+								aria-label="Ingredienser"
+
+							/>
+						</div>
+
+					</label>
 					</fieldset>
 
 					<div class="form-group">
@@ -346,7 +368,7 @@
 							id="email"
 							name="email"
 							placeholder="namn@email.com"
-							reqired
+							required
 						/>
 					</div>
 				</fieldset>
@@ -354,5 +376,9 @@
 				<button type="submit">Skicka recept</button>
 			</form>
 		</main>
+		<footer>
+			<p class="m-bottom m-top m-left">&copy; 2026 Lisa Lillhannus</p>
+			<p class="m-right m-top"><a href="index.html">LOGO</a></p>
+		</footer>
 	</body>
 </html>
